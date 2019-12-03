@@ -9,7 +9,14 @@ console.log("File to extract: " + file);
 const dest = core.getInput('dest');
 console.log("Destination: " + dest);
 
-const fileEnding = file.slice((file.lastIndexOf('.') - 1 >>> 0) + 2);
+function getFileEnding(file) {
+    fileEnding = fileEnding = file.slice((file.lastIndexOf('.') - 1 >>> 0) + 2);;
+    if (file.endsWith('.tar.gz'))
+        fileEnding = '.tar.gz';
+    return fileEnding;
+}
+
+const fileEnding = getFileEnding(file);
 console.log("File Extension: " + fileEnding);
 
 if ('.tar' === fileEnding || '.tar.gz' === fileEnding) {
