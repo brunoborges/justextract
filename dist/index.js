@@ -79,13 +79,13 @@ function getFileEnding(file) {
 
 try {
     const file = core.getInput('file');
-    console.log("File to extract: ${file}.");
+    console.log("File to extract: " + file);
 
     const dest = core.getInput('dest');
-    console.log("Destination: ${dest}.");
+    console.log("Destination: " + dest);
 
     const fileEnding = file.slice((file.lastIndexOf('.') - 1 >>> 0) + 2);
-    console.log("File Extension: ${fileEnding}.");
+    console.log("File Extension: " + fileEnding);
 
     if ('.tar' === fileEnding || '.tar.gz' === fileEnding) {
         tc.extractTar(file, dest);
