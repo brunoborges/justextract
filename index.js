@@ -28,11 +28,11 @@ try {
 
     const fileEnding = file.slice((file.lastIndexOf('.') - 1 >>> 0) + 2);
     if ('.tar' === fileEnding || '.tar.gz' === fileEnding) {
-        await tc.extractTar(file, dest);
+        tc.extractTar(file, dest);
     } else if ('.zip' === fileEnding) {
-        await tc.extractZip(file, dest);
+        tc.extractZip(file, dest);
     } else if ('.7z' === fileEnding) {
-        await tc.extract7z(file, dest);
+        tc.extract7z(file, dest);
     } else {
         throw new Error('${file} has an unsupported file extension.');
     }
