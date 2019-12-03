@@ -10,10 +10,11 @@ const dest = core.getInput('dest');
 console.log("Destination: " + dest);
 
 function getFileEnding(file) {
-    fileEnding = file.slice((file.lastIndexOf('.') - 1 >>> 0) + 2);;
-    if (file.endsWith('.tar.gz'))
-        fileEnding = '.tar.gz';
-    return fileEnding;
+    if (file.endsWith('.tar.gz')) {
+        return '.tar.gz';
+    } else {
+        return file.slice((file.lastIndexOf('.') - 1 >>> 0) + 2);
+    }
 }
 
 const fileEnding = getFileEnding(file);
