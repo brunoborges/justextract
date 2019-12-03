@@ -15,7 +15,7 @@ The file will be extracted inside GITHUB_WORKSPACE.
 ## Example usage
 
 ```yaml
-uses: brunoborges/justextract@master
+uses: brunoborges/justextract@v1
 with:
   file: fileName
 ```
