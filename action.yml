@@ -1,0 +1,15 @@
+name: 'Just Extract'
+description: 'Extracts a file located on your build agent disk.'
+inputs:
+  file:  # id of input
+    description: 'Which file to extract'
+    required: true
+  dest: 
+    description: 'Where you want to place it. Defaults to local. Optional.'
+  
+outputs:
+  extractedPath: # id of output
+    description: 'The path where the file was extracted to.'
+runs:
+  using: 'node12'
+  main: 'index.js'
