@@ -20,6 +20,9 @@ Full path of where the file was extracted to.
 
 ## Example usage
 
-uses: actions/hello-world-javascript-action@v1
+```yaml
+uses: brunoborges/justextract@master
 with:
-  who-to-greet: 'Mona the Octocat'
+  file: fileName
+  dest: destFolder
+```
