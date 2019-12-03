@@ -12,4 +12,4 @@ outputs:
     description: 'The path where the file was extracted to.'
 runs:
   using: 'node12'
-  main: 'dist/index.js'
+  main: 'index.js'
