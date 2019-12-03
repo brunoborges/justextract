@@ -38,7 +38,7 @@ try {
     } else if ('.7z' === fileEnding) {
         tc.extract7z(file, dest);
     } else {
-        throw new Error(file + " has an unsupported file extension.");
+        throw file + " has an unsupported file extension.";
     }
 } catch (error) {
     core.setFailed(error.message);
