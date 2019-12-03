@@ -6,7 +6,7 @@ const tc = require('@actions/tool-cache');
 const file = core.getInput('file');
 console.log("File to extract: " + file);
 
-const dest = core.getInput('dest');
+const dest = process.env['GITHUB_WORKSPACE'];
 console.log("Destination: " + dest);
 
 function getFileEnding(file) {

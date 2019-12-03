@@ -8,15 +8,9 @@ This action extracts files present in the filesystem using the GitHub Toolkit to
 
 **Required** The name of the file to be extracted.
 
-### `dest`
-
-*Optional* The destination where to extract the file.
-
 ## Outputs
 
-### `extractedPath`
-
-Full path of where the file was extracted to.
+The file will be extracted inside GITHUB_WORKSPACE.
 
 ## Example usage
 
@@ -24,5 +18,4 @@ Full path of where the file was extracted to.
 uses: brunoborges/justextract@master
 with:
   file: fileName
-  dest: destFolder
 ```

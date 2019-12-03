@@ -4,8 +4,6 @@ inputs:
   file:  # id of input
     description: 'Which file to extract'
     required: true
-  dest: 
-    description: 'Where you want to place it. Defaults to local. Optional.'
   
 outputs:
   extractedPath: # id of output
