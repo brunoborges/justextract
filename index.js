@@ -13,7 +13,7 @@ function getFileEnding(file) {
     if (file.endsWith('.tar.gz')) {
         return '.tar.gz';
     } else {
-        return file.slice((file.lastIndexOf('.') - 1 >>> 0) + 2);
+        return file.slice((file.lastIndexOf('.') >>> 0));
     }
 }
 
